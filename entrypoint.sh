@@ -43,4 +43,6 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 
+ls 
+
 sphinx-build docs ./docs/sphinx/_build
