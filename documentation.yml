@@ -1,10 +1,6 @@
 name: 'Sphinx-Doxygen'
 description: 'Building out sphinx docs with Doxygen integration'
 inputs:
-  sphinx-path:
-    description: 'Path to Sphinx Build folder'
-    required: true
-    default: 
   doxyfile-path:
     description: 'Path to Doxyfile'
     required: true
@@ -12,7 +8,7 @@ inputs:
   working-directory:
     description: 'Working directory'
     required: true
-    default: 'docs/doxygen'
+    default: './docs'
   enable-latex:
     description: 'Generate latex documentation'
     required: false
@@ -20,7 +16,7 @@ inputs:
   additional-packages:
     description: 'Extra alpine packages for the build environment'
     required: false
-    default: 'sphinx'
+    default: ''
 
 runs:
   using: 'docker'
