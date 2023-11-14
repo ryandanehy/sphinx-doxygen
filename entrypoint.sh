@@ -35,6 +35,7 @@ apk add $PACKAGES
 echo "::notice::Static build container"
 
 # run "regular" doxygen
+doxygen ./docs/doxygen/Doxyfile.in
 doxygen $1
 
 # if enabled, make latex pdf output
