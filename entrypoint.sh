@@ -35,7 +35,7 @@ apk add $PACKAGES
 echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
 
 # run "regular" doxygen
-doxygen $1
+# doxygen $1
 
 # if enabled, make latex pdf output
 if [ "$BUILD_LATEX" = true ] ; then
@@ -43,4 +43,4 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 
-#sphinx-build docs ./docs/sphinx/_build
+sphinx-build docs ./docs/sphinx/_build
