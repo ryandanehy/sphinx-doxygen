@@ -8,6 +8,7 @@ RUN pip3 install --no-cache-dir \
     # Tex
     apk update
 
+RUN ["chmod", "+x", "/entrypoint.sh"]
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
