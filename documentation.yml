@@ -4,11 +4,11 @@ inputs:
   doxyfile-path:
     description: 'Path to Doxyfile'
     required: true
-    default: './Doxyfile.in'
+    default: './Doxyfile'
   working-directory:
     description: 'Working directory'
     required: true
-    default: 'docs/doxygen'
+    default: '.'
   enable-latex:
     description: 'Generate latex documentation'
     required: false

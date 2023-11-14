@@ -26,16 +26,15 @@ else
   BUILD_LATEX=0
 fi
 
-PACKAGES="cmake git doxygen graphviz ttf-freefont $4"
+PACKAGES="doxygen graphviz ttf-freefont $4"
 if [ "$BUILD_LATEX" = true ] ; then
   PACKAGES="$PACKAGES perl build-base texlive-full biblatex ghostscript"
 fi
 apk add $PACKAGES
 
-echo "::notice::Static build container"
+echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
 
 # run "regular" doxygen
-doxygen ./docs/doxygen/Doxyfile.in
 doxygen $1
 
 # if enabled, make latex pdf output
