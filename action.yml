@@ -1,5 +1,8 @@
 name: 'Sphinx-Doxygen'
 description: 'Building out sphinx docs with Doxygen integration'
+branding:
+  icon: 'book-open'
+  color: 'gray-dark'
 inputs:
   doxyfile-path:
     description: 'Path to Doxyfile'
@@ -12,11 +15,11 @@ inputs:
   enable-latex:
     description: 'Generate latex documentation'
     required: false
-    default: false
+    default: 'false'
   additional-packages:
     description: 'Extra alpine packages for the build environment'
     required: false
-    default: ''
+    default: 'sphinx'
 
 runs:
   using: 'docker'
