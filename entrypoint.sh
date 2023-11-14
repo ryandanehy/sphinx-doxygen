@@ -5,6 +5,7 @@
 # $2 is the directory where doxygen should be executed
 # $3 is a boolean: true -> enable latex generation, false -> skip latex generation
 # $4 is a string with extra alpine packages to be installed (i.e. font-fira-code)
+# $5 nis the path to the sphinx _build directory
 
 if [ ! -d $2 ]; then
   echo "Path $2 could not be found!"
@@ -43,4 +44,4 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 
-sphinx-build docs ./docs/sphinx/_build
+sphinx-build $2 $5

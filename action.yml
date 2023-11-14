@@ -4,6 +4,10 @@ branding:
   icon: 'book-open'
   color: 'gray-dark'
 inputs:
+  sphinx-path:
+    description: 'Path to sphinx _build folder'
+    required: true
+    default: './_build'
   doxyfile-path:
     description: 'Path to Doxyfile'
     required: true
@@ -29,3 +33,4 @@ runs:
     - ${{ inputs.working-directory }}
     - ${{ inputs.enable-latex }}
     - ${{ inputs.additional-packages }}
+    - ${{ inputs.sphinx-path }}
