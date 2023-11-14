@@ -35,7 +35,7 @@ apk add $PACKAGES
 echo "::notice::Static build container"
 
 # run "regular" doxygen
-# doxygen $1
+doxygen $1
 
 # if enabled, make latex pdf output
 if [ "$BUILD_LATEX" = true ] ; then
@@ -43,6 +43,4 @@ if [ "$BUILD_LATEX" = true ] ; then
   make
 fi
 
-echo $(ls) 
-
-sphinx-build docs ./docs/sphinx/_build
+#sphinx-build docs ./docs/sphinx/_build

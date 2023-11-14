@@ -1,6 +1,10 @@
 name: 'Sphinx-Doxygen'
 description: 'Building out sphinx docs with Doxygen integration'
 inputs:
+  sphinx-path:
+    description: 'Path to Sphinx Build folder'
+    required: true
+    default: 
   doxyfile-path:
     description: 'Path to Doxyfile'
     required: true
