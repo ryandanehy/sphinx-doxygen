@@ -26,7 +26,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - ${{ inputs.doxyfile-path }}
-  - ${{ inputs.working-directory }}
-  - ${{ inputs.enable-latex }}
-  - ${{ inputs.additional-packages }}
+    - ${{ inputs.doxyfile-path }}
+    - ${{ inputs.working-directory }}
+    - ${{ inputs.enable-latex }}
+    - ${{ inputs.additional-packages }}
