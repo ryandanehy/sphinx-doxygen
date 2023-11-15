@@ -4,6 +4,8 @@ FROM python:3.13.0a1-alpine3.18
 # Sphinx
 RUN pip3 install --no-cache-dir \
     sphinx \
+    docutils \
+    sphinx_rtd_theme\
     breathe &&\
     # Tex
     apk update
